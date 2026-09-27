@@ -53,6 +53,7 @@ ul {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -122,11 +123,37 @@ a {
 .nav {
   display: flex;
   gap: 32px;
+  line-height: 22px;
 }
 
 .nav__link {
   font-size: 14px;
   line-height: 22px;
+}
+
+.header__burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid var(--line);
+  background: none;
+  cursor: pointer;
+}
+
+.header__burger-icon--close,
+.header__burger[aria-expanded="true"] .header__burger-icon--open {
+  display: none;
+}
+
+.header__burger[aria-expanded="true"] .header__burger-icon--close {
+  display: block;
+}
+
+.mobile-menu {
+  display: none;
 }
 
 .section-title {
@@ -260,4 +287,112 @@ a {
 .footer__bottom {
   display: flex;
   justify-content: space-between;
+}
+
+/* Tablet */
+
+@media (max-width: 1023px) {
+  .hero__intro {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .hero__title {
+    flex-basis: auto;
+  }
+
+  .hero__image {
+    height: 360px;
+  }
+
+  .projects__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 767px) {
+  .header__nav,
+  .header__button {
+    display: none;
+  }
+
+  .header__burger {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: block;
+    padding: 12px 0 24px;
+  }
+
+  .mobile-menu[hidden] {
+    display: none;
+  }
+
+  .mobile-menu__link {
+    display: block;
+    padding: 12px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .mobile-menu__button,
+  .footer__button {
+    width: 100%;
+  }
+
+  .section-title {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .hero {
+    gap: 20px;
+    padding: 32px 0 40px;
+  }
+
+  .hero__intro {
+    gap: 20px;
+  }
+
+  .hero__title {
+    font-size: 44px;
+    line-height: 48px;
+  }
+
+  .hero__image {
+    height: 210px;
+  }
+
+  .projects {
+    padding: 40px 0 48px;
+  }
+
+  .projects__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .projects__list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .footer {
+    padding-top: 32px;
+  }
+
+  .footer__contact {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+  }
 }

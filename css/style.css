@@ -228,3 +228,36 @@ a {
 .card__tags {
   color: var(--muted);
 }
+
+/* Footer */
+
+.footer {
+  padding: 48px 0 24px;
+  border-top: 1px solid var(--line);
+}
+
+.footer__contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.footer__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.footer__email,
+.footer__bottom {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--muted);
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+}

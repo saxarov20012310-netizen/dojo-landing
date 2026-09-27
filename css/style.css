@@ -1,0 +1,82 @@
+:root {
+  --paper: #f1ede2;
+  --ink: #211b18;
+  --muted: #655b54;
+  --line: #c7beb2;
+  --accent: #302038;
+  --white: #fff;
+  --hover: #e9e3d6;
+
+  --font-serif: "Oranienbaum", Georgia, serif;
+  --font-sans: "Manrope", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 26px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  font-weight: 400;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.container {
+  width: min(100% - 40px, 1200px);
+  margin-inline: auto;
+}
+
+.label {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+.link:hover {
+  text-decoration: underline;
+}

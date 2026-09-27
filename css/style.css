@@ -178,7 +178,7 @@ a {
 }
 
 .hero__title {
-  flex: 0 0 768px;
+  flex: 2;
   font-family: var(--font-serif);
   font-size: 72px;
   line-height: 76px;
@@ -291,17 +291,19 @@ a {
 
 /* Tablet */
 
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
   .hero__intro {
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
   }
 
-  .hero__title {
-    flex-basis: auto;
+  .hero__text {
+    max-width: 480px;
   }
+}
 
+@media (max-width: 1023px) {
   .hero__image {
     height: 360px;
   }
